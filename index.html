@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link rel="stylesheet" href="src/css/styles.css"-->
-    <meta name="description" content="Una página de ejemplo que utiliza etiquetas semánticas HTML5.">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/contact.css">
+    <meta name="description" content="página de ejemplo utilizando etiquetas semánticas HTML5.">
     <title>HTML Semántico</title>
 </head>
 
@@ -15,6 +16,7 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#content">Principal</a></li>
                 <li><a href="#acerca">Acerca de</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -24,24 +26,75 @@
     <main>
         <section id="inicio">
             <h2>Bienvenido a Mi Sitio Web</h2>
-            <p>Este es un ejemplo de una página web que utiliza etiquetas semánticas de HTML5 para mejorar la
-                accesibilidad y el SEO.</p>
+            <p>
+                <strong> Este es un ejemplo de una página web que utiliza etiquetas semánticas
+                    de HTML5 para mejorar la accesibilidad y el SEO.</strong>
+            </p>
+        </section>
+        <section id="content">
             <article>
                 <h2>Artículo Principal</h2>
-                <p>Este es el contenido principal del artículo.</p>
+                <p>
+                    <u> Curso Desarrollo moderno de software full stack.</u>
+                    <br>
+                    En este curso aprenderas desde cero, a desarrollar aplicaciones web,
+                    dominando todas las tecnologias de front end y back end, <br>
+                    bases de datos, frameworks y bibliotecas más populares, como Angular
+                    y react. <br>
+                    Aprenderás a crear aplicaciones web completas, desde la interfaz de
+                    usuario, hasta la lógica del servidor, utilizando las últimas
+                    tecnologías y mejores prácticas de la industria. Aprenderas a
+                    utilizar correctamente y de forma ética la IA para mejorar tu
+                    productividad <br>
+                    y la calidad de tu código. <br>
+                    Este curso está diseñado para principiantes y desarrolladores con
+                    experiencia que desean mejorar sus habilidades y conocimientos en el
+                    desarrollo web moderno. <br>
+                </p>
                 <figure>
                     <img src="img/full-stack-dark.png" alt="Imagen alusiva al desarrollo moderno de software"
                         width="600" height="400">
-                    <figcaption>Esta es una descripción de la imagen.</figcaption>
+                    <figcaption>Esta es una descripción de la imagen.
+                        <br>
+                        Imagen alusiva al desarrollo moderno de software.
+                        <br> Escribimos sobre la imagen para que los lectores <br>
+                        puedan entender mejor el contenido visual.
+                        <br> Esta imagen es un ejemplo de cómo se puede utilizar la etiqueta.
+                    </figcaption>
                 </figure>
             </article>
         </section>
         <hr>
         <section id="acerca">
             <h2>Acerca de Nosotros</h2>
-            <p>Aqui podras leer el contenido que informa acerca de Nosotros,
-                nuestros comienzos como empresa y nuestros
-                planes a futuro</p>
+            <p>
+                Aqui podras leer el contenido que informa acerca de Nosotros, nuestros
+                comienzos como empresa y nuestros planes a futuro
+            </p>
+        </section>
+        <hr>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <h2>Si tienes alguna pregunta, no dudes en contactarnos.</h2>
+
+            <form action="contact" class="contact-form">
+                <h2>Contactanos</h2>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required placeholder="Escribe tu nombre"> <br>
+                <label for="last-name">Apellido</label>
+                <input type="text" id="last-name" name="last-name" required placeholder="Escribe tu apellido"> <br>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required> <br>
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Escribe tu teléfono"> <br>
+                <label for="Asunto">Asunto</label>
+                <input type="text" id="Asunto" name="Asunto" required placeholder="Escribe el asunto"> <br>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea> <br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+
+            </form>
         </section>
 
         <aside>
@@ -49,10 +102,15 @@
             <p>Este es un contenido adicional relacionado con el tema principal.</p>
             <p>Enlaces útiles:</p>
             <ul>
-                <li><a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/aside" target="_blank"
-                        rel="noopener">MDN Web Docs - aside</a></li>
-                <li><a href="https://www.w3schools.com/tags/tag_aside.asp" target="_blank" rel="noopener">
-                        W3Schools -aside</a></li>
+                <li>
+                    <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/aside" target="_blank"
+                        rel="noopener">MDN Web Docs - aside
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/tags/tag_aside.asp" target="_blank" rel="noopener">
+                        W3Schools -aside</a>
+                </li>
             </ul>
         </aside>
     </main>
