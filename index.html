@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="src/css/contact.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
     <meta name="description" content="página de ejemplo utilizando etiquetas semánticas HTML5.">
     <title>HTML Semántico</title>
 </head>
@@ -17,25 +18,48 @@
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#content">Principal</a></li>
-                <li><a href="#acerca">Acerca de</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#acerca">Nosotros</a></li>
+                <li><a href="#contactForm">Contacto</a></li>
             </ul>
         </nav>
     </header>
-
+    <aside>
+        <h2>Información Adicional</h2>
+        <p>Este es un contenido adicional relacionado con el tema principal.</p>
+        <h3>Enlaces útiles:</h3>
+        <ul>
+            <li>
+                <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/aside" target="_blank"
+                    rel="noopener">MDN Web Docs - aside
+                </a>
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/tags/tag_aside.asp" target="_blank" rel="noopener">
+                    W3Schools -aside</a>
+            </li>
+        </ul>
+        <h3> Noticia Del Día</h3>
+        <p>Con este proyecto, ademas de conceptos de html semántico,
+            trabajaremos con una introducción a CSS, conceptos de flex-box
+            y diseño responsivo. Con esto último, la página se adaptará
+            automáticamente a diferentes tamaños de pantalla, como móviles,
+            tablets y escritorios.
+            Y comenzaremos a sentar las bases para futuros proyectos más complejos.
+        </p>
+    </aside>
     <main>
-        <section id="inicio">
+
+        <section id="inicio" class="home">
             <h2>Bienvenido a Mi Sitio Web</h2>
             <p>
                 <strong> Este es un ejemplo de una página web que utiliza etiquetas semánticas
                     de HTML5 para mejorar la accesibilidad y el SEO.</strong>
             </p>
         </section>
-        <section id="content">
+        <section id="content" class="principal">
             <article>
                 <h2>Artículo Principal</h2>
-                <p>
-                    <u> Curso Desarrollo moderno de software full stack.</u>
+                <p> <strong><em><u> Curso Desarrollo moderno de software full stack.</u></em></strong>
                     <br>
                     En este curso aprenderas desde cero, a desarrollar aplicaciones web,
                     dominando todas las tecnologias de front end y back end, <br>
@@ -51,8 +75,8 @@
                     experiencia que desean mejorar sus habilidades y conocimientos en el
                     desarrollo web moderno. <br>
                 </p>
-                <figure>
-                    <img src="img/full-stack-dark.png" alt="Imagen alusiva al desarrollo moderno de software"
+                <figure class="image-text">
+                    <img src="assets/img/full-stack-dark.png" alt="Imagen alusiva al desarrollo moderno de software"
                         width="600" height="400">
                     <figcaption>Esta es una descripción de la imagen.
                         <br>
@@ -65,15 +89,36 @@
             </article>
         </section>
         <hr>
-        <section id="acerca">
+        <section id="acerca" class="sobre">
             <h2>Acerca de Nosotros</h2>
             <p>
                 Aqui podras leer el contenido que informa acerca de Nosotros, nuestros
-                comienzos como empresa y nuestros planes a futuro
+                comienzos como empresa y nuestros planes a futuro.
             </p>
+            <p>En GreenPath Solutions, nuestra historia comenzó con una simple pero poderosa idea: <br>
+                combinarinnovación y sostenibilidad para construir un futuro mejor. Fundada en 2015
+                por un equipo de ingenieros y ambientalistas apasionados, nuestra empresa nació del
+                deseo de ofrecer soluciones energéticas eficientes
+                y respetuosas con el medio ambiente.
+
+                Lo que empezó como un pequeño proyecto en un garaje, hoy es una empresa líder en
+                energía renovable, con presencia en más de 10 países y un compromiso inquebrantable
+                con la calidad y la responsabilidad ecológica. A lo largo de los años, hemos trabajado
+                con comunidades, gobiernos y empresas para implementar tecnologías limpias que reduzcan
+                el impacto ambiental sin sacrificar eficiencia.
+
+                En GreenPath Solutions, creemos que el progreso y la sostenibilidad pueden ir de la mano.
+                Nuestro equipo, formado por expertos en diversas disciplinas, sigue impulsando la
+                innovación mientras mantenemos nuestros valores fundamentales: integridad, excelencia
+                y un firme compromiso con el planeta.
+            </p>
+            <figure class="ambient">
+                <img src="assets/img/laguna.png" alt="Imagen de ambiente lacustre con aves">
+                <img src="assets/img/back.png" alt=" Imagen gota con mapa y arbol">
+            </figure>
         </section>
         <hr>
-        <section id="contacto">
+        <section id="contactForm" class="contacto">
             <h2>Contacto</h2>
             <h2>Si tienes alguna pregunta, no dudes en contactarnos.</h2>
 
@@ -97,22 +142,6 @@
             </form>
         </section>
 
-        <aside>
-            <h3>Información Adicional</h3>
-            <p>Este es un contenido adicional relacionado con el tema principal.</p>
-            <p>Enlaces útiles:</p>
-            <ul>
-                <li>
-                    <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/aside" target="_blank"
-                        rel="noopener">MDN Web Docs - aside
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.w3schools.com/tags/tag_aside.asp" target="_blank" rel="noopener">
-                        W3Schools -aside</a>
-                </li>
-            </ul>
-        </aside>
     </main>
 
     <footer>

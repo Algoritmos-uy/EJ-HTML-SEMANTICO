@@ -1,0 +1,115 @@
+/* === RESET BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === ESTILOS BASE === */
+html {
+  font-size: 16px; /* tamaño base accesible */
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #222;
+  padding: 1rem;
+}
+
+/* === TIPOGRAFÍA === */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* === IMÁGENES Y CONTENEDORES === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === BOTONES Y LINKS === */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #0070f3;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+/* === MOBILE FIRST (sin media queries) === */
+/* Ya vienen por defecto los estilos base para móviles */
+
+
+/* === MEDIA QUERIES PARA DISTINTOS RANGOS === */
+
+/* Pequeños móviles (hasta 360px aprox.) */
+@media (max-width: 360px) {
+  body {
+    font-size: 14px; /* texto un poco más chico */
+  }
+}
+
+/* Móviles estándar (361px - 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem; /* menos margen lateral */
+  }
+}
+
+/* Phablets y móviles grandes (481px - 767px) */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem; /* títulos más contenidos */
+  }
+}
+
+
+/* === YA PASANDO A TABLETS Y MÁS GRANDES === */
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+
+/* === MEDIA QUERIES (Desktop First desde aquí) === */
+
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}

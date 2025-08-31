@@ -1,0 +1,64 @@
+@media (min-width: 320px) and (max-width: 1024px) {
+    /* Add your responsive CSS rules here */
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 0.5rem 0;
+    }
+
+    nav ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 0.75rem;
+    }
+
+    .principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+
+    .image-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.3rem;
+    }
+
+    .ambient {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5rem 0;
+    }
+
+    .ambient img {
+        height: auto;
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+        padding: 0.5rem;
+    }
+
+    aside {
+        display: none;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
+}

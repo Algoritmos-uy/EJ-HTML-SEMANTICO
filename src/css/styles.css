@@ -1,6 +1,13 @@
 /* Estilos CSS básicos para el documento HTML semántico */
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,12 +15,14 @@ body {
     color: #222;
 }
 
+/*Estilos de header*/
+
 header {
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -21,9 +30,10 @@ header {
     z-index: 1000;
     background: #0077b6;
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    padding: 1rem 0;
 }
+
+/*Estilos de menú de navegación*/
 
 nav ul {
     list-style: none;
@@ -40,11 +50,19 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #f8d700;
+    font-size: 1.25rem;
+    transition: transform 0.2s ease;
+}
+
+/*Estilos del contenedor principal*/
+
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
     background: #fff;
     padding: 30px;
     border-radius: 8px;
@@ -52,7 +70,7 @@ main {
 }
 
 section {
-    scroll-margin-top: 5rem; /* Igual a la altura del header */
+    scroll-margin-top: 5rem; /*Evita que parte de la sección se esconda detras de header*/
 }
 
 article h2,
@@ -64,7 +82,7 @@ figure {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px 0;
+    margin: 1rem 0;
     text-align: center;
     border: 3px solid #0077b6;
     border-radius: 8px;
@@ -84,6 +102,13 @@ figcaption {
     text-align: left;
 }
 
+.ambient {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
 aside {
     display: flex;
     flex-direction: column;
@@ -91,16 +116,22 @@ aside {
     position: fixed;
     top: 5rem;
     left: 1rem;
-    margin-top: 1rem;
-    width: 200px;
+    width: 10rem;
+
     height: auto;
     background: #b3f3fb;
     padding: 15px;
     margin-top: 20px;
     border-left: 4px solid #0077b6;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
+aside h2,
+h3 {
+    color: #0077b6;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
 aside ul {
     list-style: none;
     padding: 0;
@@ -108,13 +139,13 @@ aside ul {
 }
 
 aside ul a {
-    color: #f83a00;
+    color: #00074f;
     text-decoration: none;
 }
 
 aside ul a:hover {
-    color: #00074f;
     text-decoration: underline;
+    color: #f83a00;
 }
 
 hr {
@@ -138,6 +169,6 @@ footer {
 }
 
 footer a {
-    color: #90e0ef;
+    color: #c4c4c4;
     text-decoration: none;
 }
