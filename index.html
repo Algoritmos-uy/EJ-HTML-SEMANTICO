@@ -2,19 +2,25 @@
 <html lang="es">
 
 <head>
+    <!-- Metadatos y enlaces a hojas de estilo -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hojas de estilo principales para la página -->
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="src/css/contact.css">
     <link rel="stylesheet" href="src/css/responsive.css">
-    <link rel="stylesheet" href="src/css/resp-y-media.css">
+    <!-- Descripción para SEO -->
     <meta name="description" content="página de ejemplo utilizando etiquetas semánticas HTML5.">
     <title>HTML Semántico</title>
 </head>
 
 <body>
+    
+    <!-- Encabezado principal del sitio, incluye el título y la navegación -->
+
     <header>
         <h1>Mi Sitio Web</h1>
+        <!-- Menú de navegación principal -->
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -24,6 +30,9 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Barra lateral con información adicional y enlaces útiles -->
+
     <aside>
         <h2>Información Adicional</h2>
         <p>Este es un contenido adicional relacionado con el tema principal.</p>
@@ -52,8 +61,10 @@
             Y tambien con formularios de registro e inicio de sesión.
         </p>
     </aside>
-    <main>
 
+    <!-- Contenido principal del sitio -->
+    <main>
+        <!-- Sección de bienvenida o portada -->
         <section id="inicio" class="home">
             <h2>Bienvenido a Mi Sitio Web</h2>
             <p>
@@ -61,6 +72,8 @@
                     de HTML5 para mejorar la accesibilidad y el SEO.</strong>
             </p>
         </section>
+
+        <!-- Sección principal con un artículo destacado -->
         <section id="content" class="principal">
             <article>
                 <h2>Artículo Principal</h2>
@@ -80,6 +93,7 @@
                     experiencia que desean mejorar sus habilidades y conocimientos en el
                     desarrollo web moderno. <br>
                 </p>
+                <!-- Imagen ilustrativa con pie de foto -->
                 <figure class="image-text">
                     <img src="assets/img/full-stack-dark.png" alt="Imagen alusiva al desarrollo moderno de software"
                         width="600" height="400">
@@ -93,7 +107,10 @@
                 </figure>
             </article>
         </section>
+
         <hr>
+
+        <!-- Sección sobre la empresa o el equipo -->
         <section id="acerca" class="sobre">
             <h2>Acerca de Nosotros</h2>
             <p>
@@ -117,16 +134,20 @@
                 innovación mientras mantenemos nuestros valores fundamentales: integridad, excelencia
                 y un firme compromiso con el planeta.
             </p>
+            <!-- Imágenes relacionadas con la empresa o el tema ambiental -->
             <figure class="ambient">
                 <img src="assets/img/laguna.png" alt="Imagen de ambiente lacustre con aves">
                 <img src="assets/img/back.png" alt=" Imagen gota con mapa y arbol">
             </figure>
         </section>
+
         <hr>
+
+        <!-- Sección de contacto con formulario -->
         <section id="contactForm" class="contacto">
             <h2>Contacto</h2>
             <h2>Si tienes alguna pregunta, no dudes en contactarnos.</h2>
-
+            <!-- Formulario de contacto -->
             <form action="contact" class="contact-form">
                 <h2>Contactanos</h2>
                 <label for="name">Nombre:</label>
@@ -143,12 +164,11 @@
                 <textarea id="message" name="message" rows="4" required></textarea> <br>
                 <button type="submit">Enviar</button>
                 <button type="reset">Borrar</button>
-
             </form>
         </section>
-
     </main>
 
+    <!-- Pie de página con derechos de autor y contacto -->
     <footer>
         <p>Dr © 2025 Mi Sitio Web</p>
         <p><a href="mailto:info@misitioweb.com">info@misitioweb.com</a></p>
