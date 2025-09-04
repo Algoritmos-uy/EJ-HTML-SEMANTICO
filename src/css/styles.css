@@ -8,6 +8,32 @@
     padding: 0;
 }
 
+/* Tipografía fluida con límites seguros */
+/* Ajusta el tamaño de fuente entre 16px y 18px según el ancho de la ventana */
+
+html {
+    font-size: clamp(
+        14px,
+        1.2vw + 0.5rem,
+        18px
+    ); /* LA FUNCION CLAMP MANTIENE LAS FUENTES
+         DENTRO DE UN RANGO LEGIBLE: VALOR-MINIMO, VALOR-PREFERIDO, VALOR-MÁXIMO*/
+}
+
+/*OTRO EJEMPLO CON CLAMP*/
+
+/*Aquí el tamaño de letra:
+
+Nunca será menor a 1.5rem.
+
+Intentará escalar con 5vw (5% del ancho de la ventana).
+
+Nunca superará 3rem.*/
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
 /* Estilos base para el cuerpo del documento */
 
 body {
@@ -17,7 +43,7 @@ body {
 }
 
 /*Estilos de header*/
-
+/*Header fijo en la parte superior*/
 header {
     position: fixed;
     display: flex;
@@ -39,7 +65,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 0; /*márgenes por orden, top, right, bottom, left*/
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -146,8 +172,6 @@ aside p {
 
 aside ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 aside ul a {
@@ -187,10 +211,4 @@ footer {
 footer a {
     color: #c4c4c4;
     text-decoration: none;
-}
-/* Tipografía fluida con límites seguros */
-/* Ajusta el tamaño de fuente entre 16px y 18px según el ancho de la ventana */
-
-html {
-    font-size: clamp(14px, 1.2vw + 0.5rem, 18px);
 }
