@@ -8,207 +8,194 @@
     padding: 0;
 }
 
-/* Tipografía fluida con límites seguros */
-/* Ajusta el tamaño de fuente entre 16px y 18px según el ancho de la ventana */
+/* Ejemplo con comentarios explicativos para cada propiedad */
 
 html {
-    font-size: clamp(
-        14px,
-        1.2vw + 0.5rem,
-        18px
-    ); /* LA FUNCION CLAMP MANTIENE LAS FUENTES
-         DENTRO DE UN RANGO LEGIBLE: VALOR-MINIMO, VALOR-PREFERIDO, VALOR-MÁXIMO*/
+    font-size: clamp(14px, 1.2vw + 0.5rem, 18px); /* Tamaño de fuente fluido, mínimo 14px, máximo 18px */
 }
 
 /*OTRO EJEMPLO CON CLAMP*/
 
-/*Aquí el tamaño de letra:
-
-Nunca será menor a 1.5rem.
+/*Aquí el tamaño de letra: Nunca será menor a 1.5rem.
 
 Intentará escalar con 5vw (5% del ancho de la ventana).
 
 Nunca superará 3rem.*/
 
 h1 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Escala el tamaño del h1 entre 1.5rem y 3rem según el ancho de ventana */
 }
 
 /* Estilos base para el cuerpo del documento */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif; /* Fuente principal del documento */
+    background: #f5f5f5; /* Color de fondo claro */
+    color: #222; /* Color de texto principal oscuro */
 }
 
 /*Estilos de header*/
 /*Header fijo en la parte superior*/
 header {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3rem;
-    z-index: 1000;
-    background: #0077b6;
-    color: #fff;
-    padding: 1rem 0;
+    position: fixed; /* Fija el header en la parte superior */
+    display: flex; /* Usa modelo flexbox */
+    flex-direction: row; /* Elementos en fila horizontal */
+    justify-content: space-evenly; /* Espacio uniforme entre elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    top: 0; /* Ubica el header en la parte superior */
+    left: 0; /* Ubica el header al borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    height: 3rem; /* Altura fija de 3rem */
+    z-index: 1000; /* Prioridad de apilamiento alta */
+    background: #0077b6; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    padding: 1rem 0; /* Espaciado vertical de 1rem */
 }
 
 /*Estilos de menú de navegación*/
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0; /*márgenes por orden, top, right, bottom, left*/
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0; /* Sin relleno */
+    margin: 10px 0 0 0; /* Margen superior de 10px */
+    display: flex; /* Flexbox para los ítems */
+    justify-content: center; /* Centra los ítems horizontalmente */
+    gap: 20px; /* Espacio de 20px entre ítems */
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #f8d700;
-    font-size: 1.25rem;
-    transition: transform 0.2s ease;
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Texto en negrita */
 }
 
 /*Estilos del contenedor principal*/
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    margin-top: 6rem;
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 1200px; /* Ancho máximo del contenido */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0 auto; /* Centra el main horizontalmente */
+    padding: 0 1rem; /* Relleno lateral de 1rem */
+    margin-top: 6rem; /* Separación superior para el header fijo */
+    background: #fff; /* Fondo blanco */
+    padding: 30px; /* Relleno interno de 30px */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra suave */
 }
 
 /*Evita que parte de la sección se esconda detras de header*/
 
 section {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 5rem; /* Margen superior al hacer scroll para evitar que el header tape el contenido */
 }
 
 /*Estilos de artículos y secciones*/
 
 article h2,
 section h2 {
-    color: #0077b6;
+    color: #0077b6; /* Color azul para títulos */
 }
 
 figure {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 1rem 0;
-    text-align: center;
-    border: 3px solid #0077b6;
-    border-radius: 8px;
+    display: flex; /* Flexbox para contenido de la figura */
+    flex-direction: row; /* Elementos en fila */
+    align-items: center; /* Centra verticalmente */
+    margin: 1rem 0; /* Margen vertical de 1rem */
+    text-align: center; /* Centra el texto */
+    border: 3px solid #0077b6; /* Borde azul de 3px */
+    border-radius: 8px; /* Bordes redondeados */
 }
 
 img {
-    max-width: 100%;
-    height: 400px;
-    border-radius: 8px;
-    margin: 1rem;
+    max-width: 100%; /* Imagen no supera el ancho del contenedor */
+    height: 400px; /* Altura fija de 400px */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 1rem; /* Margen de 1rem alrededor */
 }
 
 figcaption {
-    font-size: 0.95em;
-    color: #555;
-    margin: 1rem;
-    text-align: left;
+    font-size: 0.95em; /* Tamaño de fuente ligeramente menor */
+    color: #555; /* Color gris oscuro */
+    margin: 1rem; /* Margen de 1rem */
+    text-align: left; /* Texto alineado a la izquierda */
 }
 
 .ambient {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
+    display: flex; /* Flexbox para ambient */
+    flex-direction: row; /* Elementos en fila */
+    gap: 1rem; /* Espacio de 1rem entre elementos */
+    align-items: center; /* Centra verticalmente */
 }
 
 /*Estilos de aside*/
 
 aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 3.5rem;
-    left: 0.5rem;
-    width: 12.5rem;
-    height: auto;
-    background: #b3f3fb;
-    padding: 1rem;
-    border-left: 4px solid #015a8a;
-    border-radius: 0.75rem;
+    display: flex; /* Flexbox para aside */
+    flex-direction: column; /* Elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    position: fixed; /* Fija el aside */
+    top: 3.5rem; /* Separación superior */
+    left: 0.5rem; /* Separación izquierda */
+    width: 12.5rem; /* Ancho fijo */
+    height: auto; /* Altura automática */
+    background: #b3f3fb; /* Fondo celeste */
+    padding: 1rem; /* Relleno interno de 1rem */
+    border-left: 4px solid #015a8a; /* Borde izquierdo azul oscuro */
+    border-radius: 0.75rem; /* Bordes redondeados */
 }
 
 aside h2,
 h3 {
-    color: #015a8a;
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    color: #015a8a; /* Color azul oscuro para títulos */
+    font-size: 1.2em; /* Tamaño de fuente 1.2em */
+    margin-bottom: 10px; /* Margen inferior de 10px */
 }
 
 aside p {
-    font-size: 0.9em;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 0.9em; /* Tamaño de fuente menor */
+    color: #333; /* Color gris oscuro */
+    margin-bottom: 10px; /* Margen inferior de 10px */
 }
 
 aside ul {
-    list-style: none;
+    list-style: none; /* Sin viñetas */
 }
 
 aside ul a {
-    color: #00074f;
-    text-decoration: none;
+    color: #00074f; /* Color azul oscuro para enlaces */
+    text-decoration: none; /* Sin subrayado */
 }
 
 aside ul a:hover {
-    text-decoration: underline;
-    color: #f83a00;
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+    color: #f83a00; /* Color naranja al pasar el mouse */
 }
 
 /*Estilos de separadores*/
 
 hr {
-    border: 0;
-    height: 2px;
-    background: #5f5f5f;
-    margin: 40px 0;
+    border: 0; /* Sin borde */
+    height: 2px; /* Altura de 2px */
+    background: #5f5f5f; /* Color gris oscuro */
+    margin: 40px 0; /* Margen vertical de 40px */
 }
 
 /*Estilos de footer*/
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-    font-size: 0.95em;
+    display: flex; /* Flexbox para footer */
+    flex-direction: row; /* Elementos en fila */
+    justify-content: space-around; /* Espacio uniforme entre elementos */
+    align-items: center; /* Centra verticalmente */
+    background: #222; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 15px 0; /* Relleno vertical de 15px */
+    margin-top: 40px; /* Margen superior de 40px */
+    font-size: 0.95em; /* Tamaño de fuente menor */
 }
 
 footer a {
-    color: #c4c4c4;
-    text-decoration: none;
+    color: #c4c4c4; /* Color gris claro para enlaces */
+    text-decoration: none; /* Sin subrayado */
 }
